@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+</head>
+<body>
+
+  <div id='container'></div>
+
+  <script id='template' type='text/ractive'>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Author</th>
+      </tr>
+
+      {{#each posts}}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{body}}</td>
+          <td>{{author}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+  </script>
+
+ <script src='script.js'></script>
+
+</body>
+</html>
