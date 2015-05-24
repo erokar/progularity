@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a3a6d0b-1b11-4666-874b-6162b5e745a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats" afterPath="$PROJECT_DIR$/stats" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_stats.py" afterPath="$PROJECT_DIR$/get_stats.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8148893" vertical-offset="75" max-vertical-offset="1230">
-              <caret line="32" column="67" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1230">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
               <folding>
                 <element signature="e#204#228#0" expanded="true" />
                 <marker date="1432484401000" expanded="true" signature="203:239" placeholder="insert into ..." />
@@ -58,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_stats.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="get_stats.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1243" max-vertical-offset="1740">
+            <state vertical-scroll-proportion="0.5472837" vertical-offset="1243" max-vertical-offset="1740">
               <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
               <folding>
                 <marker date="1432483492000" expanded="true" signature="2594:2739" placeholder="insert into ..." />
@@ -73,7 +70,7 @@
       <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="315">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -577,14 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3324937" vertical-offset="6408" max-vertical-offset="11265">
@@ -592,20 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1243" max-vertical-offset="1740">
-          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
-          <folding>
-            <marker date="1432483492000" expanded="true" signature="2594:2739" placeholder="insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8148893" vertical-offset="75" max-vertical-offset="1230">
-          <caret line="32" column="67" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1230">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
           <folding>
             <element signature="e#204#228#0" expanded="true" />
             <marker date="1432484401000" expanded="true" signature="203:239" placeholder="insert into ..." />
@@ -620,6 +599,24 @@
             <marker date="1432484401000" expanded="true" signature="897:1054" placeholder="SELECT * FRO..reddit..." />
             <marker date="1432484401000" expanded="true" signature="897:1111" placeholder="SELECT langu..." />
             <marker date="1432484401000" expanded="true" signature="1303:1323" placeholder="SELECT * FRO..reddit..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5472837" vertical-offset="1243" max-vertical-offset="1740">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+          <folding>
+            <marker date="1432483492000" expanded="true" signature="2594:2739" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
