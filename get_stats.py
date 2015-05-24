@@ -11,24 +11,64 @@ REDDIT_SECRET = "Z4Q6ohFhjnX2cMAEf8vw384rGr0"
 
 LANGUAGES = [
     "ada",
-    #"C_Programming",
-    #"coffeescript"
-    #"cpp",
-    #"csharp",
-    #"d_language",
-    #"elixir",
+    "agda",
+    "C_Programming",
+    "clojure",
+    "coffeescript",
+    "cpp",
+    "csharp",
+    "d_language",
+    "elixir",
+    "dartlang",
     "elm",
     "erlang",
     "fsharp",
+    "golang",
     "groovy",
+    "hacklang",
+    "haxe",
     "haskell",
+    "idris",
+    "iolanguage",
     "java",
     "javascript",
+    "julia",
+    "kotlin",
+    "livescript",
+    "lua",
+    "mathematica",
+    "matlab",
     "lisp",
+    "nim",
+    "ocaml",
+    "octave",
+    "opa",
     "ObjectiveC",
+    "pascal",
+    "perl",
+    "php",
+    "processing",
+    "prolog",
+    "purescript",
+    "python",
+    "rlanguage",
     "racket",
+    "ruby",
+    "rust",
+    "scala",
+    "scheme",
+    "scratch",
+    "selflanguage",
+    "asm", #assembly
+    "smalltalk",
+    "tcl",
+    "typescript",
+    "visualbasic",
+    "wolfram",
     "swift"
 ]
+
+#LANGUAGES = ["python", "ruby"]
 
 def get_reddit_token() -> str:
     client_auth = requests.auth.HTTPBasicAuth(REDDIT_CLIENT_ID, REDDIT_SECRET)
@@ -43,6 +83,7 @@ def get_stats_for_language(language: str, headers: dict) -> dict:
 
     def get_subscribers_and_accounts_active(language: str, headers: dict) -> dict:
         response = requests.get("https://oauth.reddit.com/r/" + language + "/about", headers=headers)
+        print("https://oauth.reddit.com/r/" + language + "/about")
         data = json.loads(response.text)
         accounts_active = str(data['data']['accounts_active'])
         subscribers = str(data['data']['subscribers'])
@@ -58,11 +99,11 @@ def get_stats_for_language(language: str, headers: dict) -> dict:
     db.engine.execute("insert into reddit values (CURRENT_DATE, '" + language + "', " + about["subscribers"] + ", " + submissions + ", " + about["accounts_active"] + ")")
     return {"submissions": submissions, "subscribers": about["subscribers"], "accounts_active": about["accounts_active"]}
 
-token = get_reddit_token()
-headers = {"Authorization": "bearer " + token, "User-Agent": "Progpop/0.1 by Bulldog"}
 
 
 def get_all_stats() -> str:
+    token = get_reddit_token()
+    headers = {"Authorization": "bearer " + token, "User-Agent": "Progpop/0.1 by Bulldog"}
     response_text = ""
     for language in LANGUAGES:
         stats = get_stats_for_language(language, headers)
@@ -71,4 +112,4 @@ def get_all_stats() -> str:
     return response_text
 
 
-get_all_stats()
+#get_all_stats()

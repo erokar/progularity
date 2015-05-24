@@ -1,7 +1,12 @@
 # PROGULARITY
 
+## Ok, men hvordan bør denne strukturen se ut?
+# Måned for måned, det er nok.
+# måned: [ {language: 'elm', stats: {submissions: 3, ... }}, {}  ]
+# år: [ {month: 1, stats: [ månedsdata ] }
+
 import decimal, datetime
-from flask import Flask, json
+from flask import Flask, json, Response
 from flask.ext.sqlalchemy import SQLAlchemy
  
 app = Flask(__name__, static_url_path='')
@@ -18,10 +23,18 @@ def alchemyencoder(obj):
 
 
 def month_stats() -> json:
-    """ Return all results from db """
-    #res = db.engine.execute("SELECT * FROM reddit")
-    res = db.engine.execute("SELECT * FROM reddit WHERE strftime('%m', date) = '05' GROUP BY language")
-    return json.dumps([dict(r) for r in res], default=alchemyencoder)
+
+    def add_visitors_and_submissions(stat: dict) -> dict:
+        average_visitors = stat["accounts_sum"] / stat["days"]
+        stat["average_visitors"] = round(average_visitors)
+        del stat["accounts_sum"]
+        return stat
+
+    res = db.engine.execute("SELECT language, date, sum(submissions) as submissions, subscribers, count(*) as days, SUM(accounts) as accounts_sum FROM reddit WHERE strftime('%m', date) = '05' AND strftime('%Y', date) = '2015' GROUP BY language")
+    stats = [add_visitors_and_submissions(s) for s in [dict(r) for r in res]]
+    return json.dumps(stats, default=alchemyencoder)
+
+
 
 
 def all_stats() -> json:
@@ -35,7 +48,7 @@ def root():
     #data = json.loads(response.text)
     #return jsonify(data)
     #return str(len(data['data']['children']))
-    return all_stats()
+    return Response(month_stats(), mimetype='application/json')
 
 # TODO
 @app.route('/week')
